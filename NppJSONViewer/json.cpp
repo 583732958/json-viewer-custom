@@ -1114,7 +1114,6 @@ json_format_string (const char *text)
 		case ',':			
 			if(array_custom_format_.OnBeforeProcessTheComma(output,indentation))
 			{
-				array_custom_format_.OnReceiveStream(text[pos]);
 				pos++;
 				break;
 			}
