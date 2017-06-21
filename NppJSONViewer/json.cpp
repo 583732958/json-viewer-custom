@@ -25,7 +25,7 @@
 #include <assert.h>
 #include <string.h>
 #include <sys/types.h>
-
+#include "array_custom_format.h"
 
 enum LEX_VALUE
 { LEX_MORE = 0,
@@ -52,10 +52,7 @@ LEX_MEMORY
 #define RSTRING_DEFAULT 8
 
 
-enum rui_string_error_codes
-{ RS_MEMORY, RS_OK = 1, RS_UNKNOWN };
 
-typedef enum rui_string_error_codes rstring_code;
 
 
 rcstring *
@@ -1037,6 +1034,7 @@ char *
 json_format_string (const char *text)
 {
 	size_t pos = 0, text_length;
+	array_custom_format array_custom_format_;
 
 	// make sure these two integers are signed
 	// we want to allow testing against negative when the json is bad
@@ -1050,6 +1048,7 @@ json_format_string (const char *text)
 	output = rcs_create (text_length);
 	while (pos < text_length)
 	{
+		array_custom_format_.OnReceiveStream(text[pos]);
 		switch (text[pos])
 		{
 		case '\x20':
@@ -1112,7 +1111,13 @@ json_format_string (const char *text)
 			pos++;
 			break;
 
-		case ',':
+		case ',':			
+			if(array_custom_format_.OnBeforeProcessTheComma(output,indentation))
+			{
+				array_custom_format_.OnReceiveStream(text[pos]);
+				pos++;
+				break;
+			}
 			rcs_catcs (output, ",\n", 2);
 			for (i = 0; i < indentation; i++)
 			{

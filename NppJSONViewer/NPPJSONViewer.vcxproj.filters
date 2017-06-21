@@ -18,9 +18,6 @@
     <ClCompile Include="Hyperlinks.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="json.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="JSONDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -37,6 +34,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="queue_string.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="array_custom_format.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="json.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -87,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="queue_string.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="array_custom_format.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -32,7 +32,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v120_xp</PlatformToolset>
+    <PlatformToolset>v110_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -158,9 +158,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="array_custom_format.cpp" />
     <ClCompile Include="custom_cfg.cpp" />
     <ClCompile Include="Hyperlinks.cpp" />
-    <ClCompile Include="json.c" />
+    <ClCompile Include="json.cpp" />
     <ClCompile Include="JSONDialog.cpp" />
     <ClCompile Include="NppPlugin.cpp" />
     <ClCompile Include="PluginDefinition.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="StaticDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="array_custom_format.h" />
     <ClInclude Include="custom_cfg.h" />
     <ClInclude Include="Docking.h" />
     <ClInclude Include="DockingDlgInterface.h" />

@@ -40,6 +40,11 @@ extern "C"
 
 #define JSON_MAX_STRING_LENGTH SIZE_MAX-1
 
+	enum rui_string_error_codes
+	{ RS_MEMORY, RS_OK = 1, RS_UNKNOWN };
+
+	typedef enum rui_string_error_codes rstring_code;
+
 /**
 The descriptions of the json_value node type
 **/
