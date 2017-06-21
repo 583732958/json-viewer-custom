@@ -10,7 +10,7 @@ public:
 public:
 	bool load_cfg();
 public:
-	bool is_startWith(std::string str);
+	bool is_startWith(const std::string& str);
 private:
 	std::vector<std::string> vecStartWith;
 	std::vector<std::string> vecHead;

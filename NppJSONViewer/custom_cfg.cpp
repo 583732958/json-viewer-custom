@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "custom_cfg.h"
 #include <boost/property_tree/ptree_fwd.hpp>
 #include <boost/property_tree/json_parser.hpp>
@@ -37,7 +36,7 @@ bool custom_cfg::load_cfg()
 	return true;
 }
 
-bool custom_cfg::is_startWith(std::string str)
+bool custom_cfg::is_startWith(const std::string& str)
 {
 	auto found = std::find_if(vecStartWith.begin(),vecStartWith.end(),[=](std::string s){return str.find(s)==0;});
 	return found!=vecStartWith.end();

@@ -158,14 +158,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="custom_cfg.cpp" />
     <ClCompile Include="Hyperlinks.cpp" />
     <ClCompile Include="json.c" />
     <ClCompile Include="JSONDialog.cpp" />
     <ClCompile Include="NppPlugin.cpp" />
     <ClCompile Include="PluginDefinition.cpp" />
+    <ClCompile Include="queue_string.cpp" />
     <ClCompile Include="StaticDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="custom_cfg.h" />
     <ClInclude Include="Docking.h" />
     <ClInclude Include="DockingDlgInterface.h" />
     <ClInclude Include="dockingResource.h" />
@@ -176,6 +179,7 @@
     <ClInclude Include="Notepad_plus_msgs.h" />
     <ClInclude Include="PluginDefinition.h" />
     <ClInclude Include="PluginInterface.h" />
+    <ClInclude Include="queue_string.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Scintilla.h" />
     <ClInclude Include="StaticDialog.h" />
