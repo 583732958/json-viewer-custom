@@ -159,7 +159,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="array_custom_format.cpp" />
-    <ClCompile Include="custom_cfg.cpp" />
     <ClCompile Include="Hyperlinks.cpp" />
     <ClCompile Include="json.cpp" />
     <ClCompile Include="JSONDialog.cpp" />
@@ -170,7 +169,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array_custom_format.h" />
-    <ClInclude Include="custom_cfg.h" />
     <ClInclude Include="Docking.h" />
     <ClInclude Include="DockingDlgInterface.h" />
     <ClInclude Include="dockingResource.h" />

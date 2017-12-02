@@ -1126,6 +1126,7 @@ json_format_string (const char *text)
 			break;
 
 		case '\"':	/* open string */
+			array_custom_format_.m_curKey.clear();
 			rcs_catc (output, text[pos]);
 			pos++;
 			loop = 1;	/* inner string loop trigger is enabled */
@@ -1133,6 +1134,7 @@ json_format_string (const char *text)
 			{
 				if (text[pos] == '\\')	/* escaped sequence */
 				{
+					array_custom_format_.m_curKey.push_back('\\');
 					rcs_catc (output, '\\');
 					pos++;
 				}
@@ -1140,7 +1142,7 @@ json_format_string (const char *text)
 				{
 					loop = 0;
 				}
-
+				array_custom_format_.m_curKey.push_back(text[pos]);
 				rcs_catc (output, text[pos]);
 
 				pos++;
@@ -1148,6 +1150,10 @@ json_format_string (const char *text)
 				{
 					loop = 0;
 				}
+			}
+			if (array_custom_format_.m_curKey.length()>=1)
+			{
+				array_custom_format_.m_curKey.pop_back();
 			}
 			break;
 

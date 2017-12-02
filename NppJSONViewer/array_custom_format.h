@@ -1,5 +1,6 @@
 #pragma once
 #include "json.h"
+#include <string>
 
 enum LST_CHARACTER
 {
@@ -18,7 +19,8 @@ public:
 public:
 	bool OnReceiveStream(char c);
 	bool OnBeforeProcessTheComma(rcstring *output, int nIndentation);
-
+public:
+	std::string m_curKey;
 private:
 	LST_CHARACTER m_lst_character_;
 };

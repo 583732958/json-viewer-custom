@@ -46,7 +46,7 @@ bool array_custom_format::OnBeforeProcessTheComma(rcstring *output, int nIndenta
 	}
 	
 	nTheCommaCount++;
-	if ((nTheCommaCount%20)!=0)
+	if ((nTheCommaCount%32)!=0)
 	{
 		rcs_catcs (output, ", ", 2);
 	}
